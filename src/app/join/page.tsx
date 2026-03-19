@@ -18,23 +18,23 @@ export default function JoinPage() {
             
             <div className="flex items-start gap-4 mb-6">
               <div className="w-16 h-16 rounded-xl bg-primary/10 flex items-center justify-center shrink-0">
-                <span className="text-2xl font-bold text-primary">MC</span>
+                <span className="text-2xl font-bold text-primary">DB</span>
               </div>
               <div>
                 <h3 className="font-bold text-lg text-foreground leading-tight mb-1">
-                  The 4-Step Manifestation Masterclass
+                  The Destiny Blueprint Reading
                 </h3>
-                <p className="text-sm text-foreground/60">Live Access + Lifetime Recording</p>
+                <p className="text-sm text-foreground/60">Personalized Report + 1:1 Guided Session</p>
               </div>
             </div>
 
             <div className="space-y-4 mb-6">
-              <p className="font-bold text-sm text-primary uppercase tracking-wider">Included Bonuses:</p>
+              <p className="font-bold text-sm text-primary uppercase tracking-wider">Included Experience & Tools:</p>
               {[
-                { name: "30-Minute Breakthrough Call", value: "$279 Value" },
-                { name: "5 Organs of Abundance Guidebook", value: "$50 Value" },
-                { name: "Fast-Action Workbook", value: "$47 Value" },
-                { name: "Spiritual Integration Toolkit", value: "$50 Value" }
+                { name: "Personalized Energetic Wealth Profile", value: "$250 Value" },
+                { name: "1:1 Private Alignment Call", value: "$300 Value" },
+                { name: "Energetic Blockage Roadmap", value: "$150 Value" },
+                { name: "Manifestation Accelerator Pack", value: "$97 Value" }
               ].map((bonus, i) => (
                 <div key={i} className="flex flex-start justify-between gap-3 text-sm font-medium text-foreground/80">
                   <div className="flex gap-3">
@@ -43,7 +43,7 @@ export default function JoinPage() {
                   </div>
                   <div className="flex flex-col items-end text-right shrink-0">
                     <span className="line-through text-foreground/40 text-xs">{bonus.value}</span>
-                    <span className="text-secondary font-bold text-xs uppercase tracking-wide">FREE</span>
+                    <span className="text-secondary font-bold text-xs uppercase tracking-wide">INC</span>
                   </div>
                 </div>
               ))}
@@ -51,17 +51,17 @@ export default function JoinPage() {
 
             <div className="pt-6 border-t border-primary/10 mb-6 space-y-3">
               <div className="flex justify-between items-center text-foreground/80">
-                <span className="font-medium">The 4-Step Masterclass</span>
-                <span className="font-medium">$27.00</span>
+                <span className="font-medium">Destiny Blueprint Reading</span>
+                <span className="font-medium">$149.00</span>
               </div>
               <div className="flex justify-between items-center text-foreground/80">
-                <span className="font-medium">All 4 Bonuses (Value: $426.00)</span>
-                <span className="text-secondary font-extrabold uppercase tracking-wide">FREE</span>
+                <span className="font-medium">All Deliverables (Value: $797.00)</span>
+                <span className="text-secondary font-extrabold uppercase tracking-wide">INCLUDED</span>
               </div>
               
               <div className="flex justify-between items-center pt-4 mt-2 border-t border-primary/10">
                 <span className="text-xl font-bold text-foreground">Total Today</span>
-                <span className="text-3xl font-extrabold text-primary">$27.00</span>
+                <span className="text-3xl font-extrabold text-primary">$149.00</span>
               </div>
             </div>
 
@@ -82,7 +82,7 @@ export default function JoinPage() {
               Complete Your Registration
             </h1>
             <p className="text-lg text-foreground/70 font-medium">
-              Secure your spot for the live Masterclass and unlock your bonuses instantly.
+              Secure your Destiny Blueprint Reading and unlock your personalized alignment strategy instantly.
             </p>
           </div>
 
@@ -161,7 +161,7 @@ export default function JoinPage() {
                 className="w-full group relative inline-flex items-center justify-center px-10 py-6 font-bold text-primary-foreground bg-primary rounded-2xl shadow-xl hover:bg-primary/90 transition-all duration-300 hover:-translate-y-1 active:scale-[0.98] text-xl font-sans"
               >
                 <Lock className="w-5 h-5 mr-3 opacity-80" />
-                Complete Order - $27
+                Complete Order - $149
                 <div className="absolute inset-0 bg-white/20 rounded-2xl blur-md -z-10 group-hover:opacity-100 opacity-0 transition-opacity"></div>
               </button>
               <p className="text-center text-xs text-foreground/60 mt-4 font-medium flex items-center justify-center gap-1.5">
