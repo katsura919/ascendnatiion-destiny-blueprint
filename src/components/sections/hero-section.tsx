@@ -19,6 +19,40 @@ export function HeroSection() {
         .animate-spin-slow {
           animation: spin-slow 15s linear infinite;
         }
+        .warped-image {
+          --r: 20px;
+          --s: 40px;
+          --x: 25px;
+          --y: 5px;
+        }
+        .top-right {
+          --_m:/calc(2*var(--r)) calc(2*var(--r)) radial-gradient(#000 70%,#0000 72%);
+          --_g:conic-gradient(at calc(100% - var(--r)) var(--r),#0000 25%,#000 0);
+          --_d:(var(--s) + var(--r));
+          mask: calc(100% - var(--_d) - var(--x)) 0 var(--_m), 100% calc(var(--_d) + var(--y)) var(--_m), radial-gradient(var(--s) at 100% 0,#0000 99%,#000 calc(100% + 1px)) calc(-1*var(--r) - var(--x)) calc(var(--r) + var(--y)), var(--_g) calc(-1*var(--_d) - var(--x)) 0, var(--_g) 0 calc(var(--_d) + var(--y));
+          mask-repeat: no-repeat;
+        }
+        .top-left {
+          --_m:/calc(2*var(--r)) calc(2*var(--r)) radial-gradient(#000 70%,#0000 72%);
+          --_g:conic-gradient(at var(--r) var(--r),#000 75%,#0000 0);
+          --_d:(var(--s) + var(--r));
+          mask: calc(var(--_d) + var(--x)) 0 var(--_m), 0 calc(var(--_d) + var(--y)) var(--_m), radial-gradient(var(--s) at 0 0,#0000 99%,#000 calc(100% + 1px)) calc(var(--r) + var(--x)) calc(var(--r) + var(--y)), var(--_g) calc(var(--_d) + var(--x)) 0, var(--_g) 0 calc(var(--_d) + var(--y));
+          mask-repeat: no-repeat;
+        }
+        .bottom-left {
+          --_m:/calc(2*var(--r)) calc(2*var(--r)) radial-gradient(#000 70%,#0000 72%);
+          --_g:conic-gradient(from 180deg at var(--r) calc(100% - var(--r)),#0000 25%,#000 0);
+          --_d:(var(--s) + var(--r));
+          mask: calc(var(--_d) + var(--x)) 100% var(--_m), 0 calc(100% - var(--_d) - var(--y)) var(--_m), radial-gradient(var(--s) at 0 100%,#0000 99%,#000 calc(100% + 1px)) calc(var(--r) + var(--x)) calc(-1*var(--r) - var(--y)), var(--_g) calc(var(--_d) + var(--x)) 0, var(--_g) 0 calc(-1*var(--_d) - var(--y));
+          mask-repeat: no-repeat;
+        }
+        .bottom-right {
+          --_m:/calc(2*var(--r)) calc(2*var(--r)) radial-gradient(#000 70%,#0000 72%);
+          --_g:conic-gradient(from 90deg at calc(100% - var(--r)) calc(100% - var(--r)),#0000 25%,#000 0);
+          --_d:(var(--s) + var(--r));
+          mask: calc(100% - var(--_d) - var(--x)) 100% var(--_m), 100% calc(100% - var(--_d) - var(--y)) var(--_m), radial-gradient(var(--s) at 100% 100%,#0000 99%,#000 calc(100% + 1px)) calc(-1*var(--r) - var(--x)) calc(-1*var(--r) - var(--y)), var(--_g) calc(-1*var(--_d) - var(--x)) 0, var(--_g) 0 calc(-1*var(--_d) - var(--y));
+          mask-repeat: no-repeat;
+        }
       `}</style>
 
       {/* Hero Content */}
@@ -27,37 +61,39 @@ export function HeroSection() {
         {/* Left Column */}
         <div className="w-full lg:w-1/2 flex flex-col items-start xl:pr-12 z-20">
           
-          {/* Details Box */}
-          <div className="relative inline-block mb-6 md:mb-8 px-4 py-2 md:px-5 md:py-2.5 border-2 border-secondary text-secondary font-medium tracking-wide text-xs sm:text-sm md:text-base bg-background font-sans uppercase">
+          {/* Price Anchor Box */}
+          <div className="relative inline-block mb-6 md:mb-8 px-4 py-2 md:px-5 md:py-2.5 border-2 border-secondary text-secondary font-bold tracking-wide text-sm sm:text-base md:text-lg bg-background font-sans uppercase">
             <div className="absolute -top-1.5 -left-1.5 w-3 h-3 bg-primary border-2 border-secondary z-10"></div>
             <div className="absolute -top-1.5 -right-1.5 w-3 h-3 bg-primary border-2 border-secondary z-10"></div>
             <div className="absolute -bottom-1.5 -left-1.5 w-3 h-3 bg-primary border-2 border-secondary z-10"></div>
             <div className="absolute -bottom-1.5 -right-1.5 w-3 h-3 bg-primary border-2 border-secondary z-10"></div>
-            <div className="flex items-center gap-1.5 md:gap-2">
-              <Calendar className="w-4 h-4 md:w-5 md:h-5 text-primary" /> March 21, 2026 &nbsp;|&nbsp; <Clock className="w-4 h-4 md:w-5 md:h-5 ml-1 text-primary" /> 12PM – 1PM EST
+            <div className="flex items-center gap-2">
+              <span className="line-through opacity-50 text-foreground/60">$300</span>
+              <span className="text-primary">→</span>
+              <span>Now $149</span>
             </div>
           </div>
 
           {/* Headline */}
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-[4.5rem] font-bold text-foreground font-sans leading-[1.1] mb-6 md:mb-8 tracking-tighter">
-            Become <span className="text-primary relative inline-block whitespace-nowrap">
-              Magnetic
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-[4.2rem] font-bold text-foreground font-sans leading-[1.15] mb-6 md:mb-8 tracking-tighter">
+            Unlock the <span className="text-primary relative inline-block whitespace-nowrap">
+              Hidden Blueprint
               <svg className="absolute w-full h-3 sm:h-4 md:h-6 -bottom-1 sm:-bottom-2 md:-bottom-3 left-0 text-primary" viewBox="0 0 100 10" preserveAspectRatio="none">
                 <path d="M0 5 Q 50 10 100 5" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" />
               </svg>
             </span><br />
-            to the Life You're Meant For
+            Behind Your Money, Love, and Life Patterns
           </h1>
 
           {/* Subtitle */}
-          <p className="text-foreground/75 text-base sm:text-lg md:text-xl mb-8 md:mb-12 max-w-xl leading-relaxed font-medium">
-            Learn the 4-Step Manifestation Framework that aligns your energy with money, love, and personal power even if nothing has worked before.
+          <p className="text-foreground/75 text-base sm:text-lg md:text-xl mb-8 md:mb-12 max-w-2xl leading-relaxed font-medium">
+            Discover your personal energetic map and finally understand why you keep repeating the same cycles and how to shift them for lasting alignment and success.
           </p>
 
           {/* Buttons */}
           <div className="flex flex-wrap items-center gap-4 md:gap-6 w-full sm:w-auto">
-            <Link href="/join" className="flex w-full sm:w-auto justify-center items-center px-6 py-4 sm:px-8 bg-primary text-primary-foreground rounded-full hover:bg-primary/90 transition-all font-bold text-base sm:text-lg shadow-lg hover:shadow-xl hover:-translate-y-1">
-              Join the Live Masterclass for Just $27
+            <Link href="/join" className="flex w-full sm:w-auto justify-center items-center px-6 py-4 sm:px-10 bg-primary text-primary-foreground rounded-full hover:bg-primary/90 transition-all font-bold text-base sm:text-lg shadow-lg hover:shadow-xl hover:-translate-y-1">
+              Get Yours Now
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="ml-3 shrink-0">
                  <line x1="5" y1="12" x2="19" y2="12"></line>
                  <polyline points="12 5 19 12 12 19"></polyline>
@@ -67,21 +103,31 @@ export function HeroSection() {
         </div>
 
         {/* Right Column */}
-        <div className="w-full lg:w-1/2 relative mt-16 md:mt-24 lg:mt-0 h-[400px] sm:h-[500px] md:h-[600px] lg:h-[700px] flex justify-center items-end">
+        <div className="w-full lg:w-1/2 relative mt-16 md:mt-24 lg:mt-0 h-[400px] sm:h-[500px] md:h-[600px] lg:h-[700px] flex justify-center items-center">
           
           {/* Abstract Background Blob - Using a smooth CSS border-radius blob */}
           {/* <div className="absolute top-[45%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-[85%] h-[85%] bg-primary rounded-[60%_40%_30%_70%/60%_30%_70%_40%] -z-10 shadow-2xl"></div> */}
           
-          {/* Portrait Image */}
-          <img 
-            src="/assets/hero-image.png" 
-            alt="Hero Image"
-            className="w-full h-[90%] object-cover object-top mask-image-bottom drop-shadow-2xl z-10"
-            style={{
-              maskImage: "linear-gradient(to bottom, black 80%, transparent 100%)",
-              WebkitMaskImage: "linear-gradient(to bottom, black 80%, transparent 100%)"
-            }}
-          />
+          {/* Diced Images Section */}
+          <div className="w-[90%] sm:w-[85%] lg:w-[90%] xl:w-[85%] max-w-[600px] aspect-square grid grid-cols-2 gap-4 md:gap-6 z-10">
+            {[
+              { src: "/assets/hero-images/love.webp", mask: "bottom-right", alt: "Love and Relationship" },
+              { src: "/assets/hero-images/career.webp", mask: "bottom-left", alt: "Career and Wealth" },
+              { src: "/assets/hero-images/health.jpeg", mask: "top-right", alt: "Health and Wellness" },
+              { src: "/assets/hero-images/money.webp", mask: "top-left", alt: "Manifestation and Money" },
+            ].map((item, index) => (
+              <div
+                key={index}
+                className="relative w-full h-full overflow-hidden rounded-[20px] drop-shadow-xl"
+              >
+                <img
+                  src={item.src}
+                  alt={item.alt}
+                  className={`warped-image ${item.mask} absolute inset-0 w-full h-full object-cover object-center`}
+                />
+              </div>
+            ))}
+          </div>
 
           {/* Floating badges */}
           {/* Top Right "Hire Me" Stamp -> "Register Now" */}
@@ -111,7 +157,7 @@ export function HeroSection() {
                 <div className="absolute -top-5 -left-4 sm:-top-7 sm:-left-5 w-8 h-8 sm:w-10 sm:h-10 text-primary fill-primary drop-shadow-md">
                   <svg viewBox="0 0 24 24" transform="rotate(-15)"><path d="M4 2L20 12L13 14.5L16 22L13 23L9.5 15.5L4 20V2Z" /></svg>
                 </div>
-                Personal Power
+                Love and Relationship
               </div>
           </div>
 
@@ -121,7 +167,7 @@ export function HeroSection() {
                 <div className="absolute -top-5 -right-5 sm:-top-6 sm:-right-6 w-8 h-8 sm:w-10 sm:h-10 text-secondary fill-secondary drop-shadow-md">
                   <svg viewBox="0 0 24 24" transform="scale(-1, 1) rotate(-15)"><path d="M4 2L20 12L13 14.5L16 22L13 23L9.5 15.5L4 20V2Z" /></svg>
                 </div>
-                Money & Love
+                Money & Career
               </div>
           </div>
 
