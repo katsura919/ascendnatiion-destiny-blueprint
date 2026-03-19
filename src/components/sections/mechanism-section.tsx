@@ -12,7 +12,7 @@ export function MechanismSection() {
           <div className="absolute -top-1.5 -right-1.5 w-3 h-3 bg-background border-2 border-card z-10"></div>
           <div className="absolute -bottom-1.5 -left-1.5 w-3 h-3 bg-background border-2 border-card z-10"></div>
           <div className="absolute -bottom-1.5 -right-1.5 w-3 h-3 bg-background border-2 border-card z-10"></div>
-          The Foundation
+          There’s a Blueprint Behind Your Life
         </div>
 
         {/* Main Heading */}

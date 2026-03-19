@@ -6,12 +6,12 @@ export function OfferIntroSection() {
       <div className="max-w-7xl mx-auto px-6 flex flex-col items-center text-center relative z-20">
         
         {/* Section Badge */}
-        <div className="relative inline-block mb-10 px-5 py-2.5 border-2 border-primary text-primary-foreground font-bold tracking-widest text-sm bg-background/50 uppercase">
+        <div className="relative inline-block mb-10 px-5 py-2.5 border-2 border-primary text-secondary font-bold tracking-widest text-sm bg-background/50 uppercase">
           <div className="absolute -top-1.5 -left-1.5 w-3 h-3 bg-secondary border-2 border-primary z-10"></div>
           <div className="absolute -top-1.5 -right-1.5 w-3 h-3 bg-secondary border-2 border-primary z-10"></div>
           <div className="absolute -bottom-1.5 -left-1.5 w-3 h-3 bg-secondary border-2 border-primary z-10"></div>
           <div className="absolute -bottom-1.5 -right-1.5 w-3 h-3 bg-secondary border-2 border-primary z-10"></div>
-          The Transformation
+          Your Destiny Blueprint Reading
         </div>
 
         {/* Main Heading */}
