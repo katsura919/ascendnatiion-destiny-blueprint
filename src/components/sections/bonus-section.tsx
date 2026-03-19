@@ -4,26 +4,26 @@ import { CheckCircle2, ArrowRight } from "lucide-react";
 export function BonusSection() {
   const bonuses = [
     {
-      title: "30-Minute Breakthrough Call",
-      value: "$279",
-      image: "/assets/bonus/30-minute-manifestation.webp",
+      title: "5 Organs of Abundance Guidebook",
+      value: "$97",
+      image: "/assets/bonus/organs-of-abundance.webp",
       delay: "0",
     },
     {
-      title: "5 Organs of Abundance Guidebook",
-      value: "$50",
-      image: "/assets/bonus/organs-of-abundance.webp",
+      title: "The Energetic Reset Meditation",
+      value: "$47",
+      image: "/assets/bonus/meditation.webp",
       delay: "75",
     },
     {
-      title: "Fast-Action Workbook",
-      value: "$47",
+      title: "Fast-Action Blueprint Workbook",
+      value: "$67",
       image: "/assets/bonus/fast-action-workbook.webp",
       delay: "150",
     },
     {
-      title: "Spiritual Integration Toolkit",
-      value: "$50",
+      title: "Manifestation Alignment Toolkit",
+      value: "$97",
       image: "/assets/bonus/practical-spirituality.webp",
       delay: "200",
     },
@@ -45,13 +45,13 @@ export function BonusSection() {
           <div className="absolute -top-1.5 -right-1.5 w-3 h-3 bg-background border-2 border-primary z-10"></div>
           <div className="absolute -bottom-1.5 -left-1.5 w-3 h-3 bg-background border-2 border-primary z-10"></div>
           <div className="absolute -bottom-1.5 -right-1.5 w-3 h-3 bg-background border-2 border-primary z-10"></div>
-          Free Masterclass Bonuses
+          Exclusive Reading Bonuses
         </div>
 
         {/* Main Heading */}
         <h2 className="text-4xl md:text-5xl lg:text-7xl font-bold font-heading tracking-tight leading-tight text-center mb-16">
-          When You Join Today, <br className="hidden md:block" />
-          <span className="text-secondary italic">You Also Get:</span>
+          When You Secure Your <br className="hidden md:block" />
+          <span className="text-secondary italic">Reading Today:</span>
         </h2>
 
         {/* Bonus Grid */}
@@ -62,14 +62,13 @@ export function BonusSection() {
               className={`group flex flex-col bg-background border border-primary-foreground/10 rounded-3xl overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl shadow-black/20`}
             >
               <div className="relative w-full aspect-video bg-primary-foreground/5 overflow-hidden">
-                <Image 
-                  src={bonus.image}
-                  alt={bonus.title}
-                  fill
-                  className="object-cover object-center group-hover:scale-105 transition-transform duration-700"
-                />
+                <div className="absolute inset-0 bg-primary/20 z-10"></div>
+                {/* Fallback pattern if image is missing */}
+                <div className="absolute inset-0 flex items-center justify-center text-primary/20 font-black text-6xl uppercase tracking-tighter opacity-10">
+                  BONUS
+                </div>
                 {/* Value Pill overlay */}
-                <div className="absolute top-4 right-4 bg-background text-primary font-bold font-sans px-4 py-1.5 rounded-full text-sm md:text-base shadow-lg z-10 flex items-center gap-2">
+                <div className="absolute top-4 right-4 bg-background text-primary font-bold font-sans px-4 py-1.5 rounded-full text-sm md:text-base shadow-lg z-20 flex items-center gap-2">
                   <span>Value:</span>
                   <span className="line-through opacity-70">{bonus.value}</span>
                   <span className="text-primary uppercase tracking-wider text-xs ml-1">Included</span>
@@ -94,7 +93,7 @@ export function BonusSection() {
               Combined Value
             </p>
             <p className="text-4xl md:text-5xl font-extrabold font-heading text-foreground line-through decoration-primary/30 decoration-4">
-              $426+
+              $300+
             </p>
           </div>
 
@@ -105,11 +104,12 @@ export function BonusSection() {
               Your Investment Today
             </p>
             <p className="text-5xl md:text-6xl font-extrabold font-sans text-primary flex items-center gap-4">
-              <span className="text-3xl md:text-4xl text-foreground font-medium">Only</span> $27
+              <span className="text-3xl md:text-4xl text-foreground font-medium">Only</span> $149
             </p>
           </div>
 
         </div>
+
 
       </div>
     </section>

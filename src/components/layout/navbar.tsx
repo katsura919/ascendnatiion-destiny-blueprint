@@ -24,14 +24,14 @@ export function Navbar() {
         </Link>
         
         <div className="hidden lg:flex items-center gap-10 text-base font-bold font-sans">
-          <a href="#masterclass" onClick={(e) => handleScroll(e, '#masterclass')} className="opacity-80 hover:opacity-100 transition-opacity">The Masterclass</a>
-          <a href="#coaches" onClick={(e) => handleScroll(e, '#coaches')} className="opacity-80 hover:opacity-100 transition-opacity">Coaches</a>
+          <a href="#revelations" onClick={(e) => handleScroll(e, '#revelations')} className="opacity-80 hover:opacity-100 transition-opacity">What's Inside</a>
+          <a href="#reading" onClick={(e) => handleScroll(e, '#reading')} className="opacity-80 hover:opacity-100 transition-opacity">The Reading</a>
+          <a href="#coaches" onClick={(e) => handleScroll(e, '#coaches')} className="opacity-80 hover:opacity-100 transition-opacity">Meet the Coaches</a>
           <a href="#testimonials" onClick={(e) => handleScroll(e, '#testimonials')} className="opacity-80 hover:opacity-100 transition-opacity">Success Stories</a>
-          <a href="#bonus" onClick={(e) => handleScroll(e, '#bonus')} className="opacity-80 hover:opacity-100 transition-opacity">Bonuses</a>
         </div>
 
         <Link href="/join" className="bg-background text-foreground px-4 py-2 sm:px-6 md:px-8 md:py-3 rounded-full flex items-center justify-center gap-1.5 shrink-0 text-xs md:text-sm font-bold hover:bg-background/90 hover:scale-105 transition-all">
-          Join Now
+          Buy Now
           <ArrowRight className="w-3.5 h-3.5 md:w-4 md:h-4 stroke-[3]" />
         </Link>
       </nav>

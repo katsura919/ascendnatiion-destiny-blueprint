@@ -42,10 +42,10 @@ export function Footer() {
           {/* Quick Links */}
           <div className="flex flex-col gap-4">
             <h4 className="font-bold font-sans text-xl mb-2 text-primary-foreground">Quick Links</h4>
-            <a href="#masterclass" onClick={(e) => handleScroll(e, '#masterclass')} className="text-secondary-foreground/70 hover:text-primary-foreground transition-colors w-max">The Masterclass</a>
+            <a href="#reading" onClick={(e) => handleScroll(e, '#reading')} className="text-secondary-foreground/70 hover:text-primary-foreground transition-colors w-max">The Reading</a>
+            <a href="#revelations" onClick={(e) => handleScroll(e, '#revelations')} className="text-secondary-foreground/70 hover:text-primary-foreground transition-colors w-max">What's Inside</a>
             <a href="#coaches" onClick={(e) => handleScroll(e, '#coaches')} className="text-secondary-foreground/70 hover:text-primary-foreground transition-colors w-max">Meet the Coaches</a>
             <a href="#testimonials" onClick={(e) => handleScroll(e, '#testimonials')} className="text-secondary-foreground/70 hover:text-primary-foreground transition-colors w-max">Success Stories</a>
-            <a href="#bonus" onClick={(e) => handleScroll(e, '#bonus')} className="text-secondary-foreground/70 hover:text-primary-foreground transition-colors w-max">Bonuses</a>
           </div>
 
           {/* Legal & Support */}

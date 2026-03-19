@@ -9,13 +9,13 @@ export function ProblemSection() {
           <div className="absolute -top-1.5 -right-1.5 w-3 h-3 bg-primary border-2 border-secondary z-10"></div>
           <div className="absolute -bottom-1.5 -left-1.5 w-3 h-3 bg-primary border-2 border-secondary z-10"></div>
           <div className="absolute -bottom-1.5 -right-1.5 w-3 h-3 bg-primary border-2 border-secondary z-10"></div>
-          Why You Still Feel Stuck
+          The Stuck Loop
         </div>
 
         {/* Main Heading */}
-        <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground font-sans leading-tight mb-8 max-w-4xl tracking-tight">
-          You've been wanting more from your life, your business, and yourself... <br className="hidden md:block"/>
-          <span className="text-primary italic font-heading">But somehow, you keep settling for what's just "fine."</span>
+        <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-foreground font-sans leading-tight mb-8 max-w-5xl tracking-tight">
+          No matter how much you work on yourself… <br className="hidden md:block"/>
+          <span className="text-primary italic font-heading">something keeps looping.</span>
         </h2>
 
         {/* Points list */}
@@ -26,7 +26,7 @@ export function ProblemSection() {
               1
             </div>
             <p className="text-lg md:text-xl font-medium text-foreground/80 leading-relaxed pt-2">
-              You're working toward your next income level... but <span className="text-secondary font-bold">something feels off</span>.
+              You hit <span className="text-secondary font-bold">income plateaus</span> no matter how hard you try.
             </p>
           </div>
 
@@ -35,7 +35,7 @@ export function ProblemSection() {
               2
             </div>
             <p className="text-lg md:text-xl font-medium text-foreground/80 leading-relaxed pt-2">
-              You keep repeating the same <span className="text-secondary font-bold">emotional patterns in relationships</span>.
+              You attract the <span className="text-secondary font-bold">same type of relationships</span> again and again.
             </p>
           </div>
 
@@ -44,7 +44,7 @@ export function ProblemSection() {
               3
             </div>
             <p className="text-lg md:text-xl font-medium text-foreground/80 leading-relaxed pt-2">
-              You're chasing peace, freedom, and success—but <span className="text-secondary font-bold">never fully landing in it</span>.
+              You feel stuck between <span className="text-secondary font-bold">progress and frustration</span>.
             </p>
           </div>
 
@@ -53,18 +53,23 @@ export function ProblemSection() {
               4
             </div>
             <p className="text-lg md:text-xl font-medium text-foreground/80 leading-relaxed pt-2">
-              You've tried affirmations, vision boards, and mindset work... but <span className="text-secondary font-bold">nothing sticks</span>.
+              You know you’re capable of more—but <span className="text-secondary font-bold">can’t fully access it</span>.
             </p>
           </div>
 
         </div>
 
         {/* Conclusion Statement */}
-        <div className="mt-20 relative inline-block">
-          <div className="absolute -inset-4 bg-primary/10 -skew-y-2 z-0 rounded-xl"></div>
-          <p className="relative z-10 text-2xl md:text-3xl font-bold text-foreground font-heading italic tracking-wide">
-            And deep down... you know you're meant for more.
+        <div className="mt-20 flex flex-col items-center gap-4 text-center">
+          <p className="text-xl md:text-2xl font-medium text-foreground/70">
+            It’s not because you’re doing something wrong.
           </p>
+          <div className="relative inline-block">
+            <div className="absolute -inset-4 bg-primary/10 -skew-y-1 z-0 rounded-xl"></div>
+            <p className="relative z-10 text-2xl md:text-4xl font-black text-foreground font-heading">
+              It’s because you’ve never seen the <span className="text-primary italic">deeper pattern</span> behind it.
+            </p>
+          </div>
         </div>
 
       </div>

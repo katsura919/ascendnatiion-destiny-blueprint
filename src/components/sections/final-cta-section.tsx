@@ -1,47 +1,40 @@
 import Link from "next/link";
 import { ArrowRight, Calendar, Clock, ChevronDown } from "lucide-react";
+import { SparklesText } from "../ui/sparkles-text";
 
 export function FinalCtaSection() {
   const faqs = [
     {
-      question: "Is this masterclass live?",
-      answer: "Yes! The masterclass happens live on March 21, 2026. You'll have the opportunity to ask questions and get direct feedback during our dedicated Q&A segment at the end.",
+      question: "What exactly is a Destiny Blueprint Reading?",
+      answer: "It is a deep-dive energetic analysis using your birth name and date of birth to decode your unique frequency map. You receive a personalized report covering money, love, and health, followed by a 1:1 integration call.",
     },
     {
-      question: "Will there be a recording if I can't make it?",
-      answer: "Absolutely. When you register, you secure lifetime access to the full recording, plus any accompanying workbooks or resources, so you can revisit the framework whenever you need an energetic reset.",
+      question: "How long does it take to get my results?",
+      answer: "Once you secure your reading, our team begins the decoding process immediately. You will receive your personalized report via email within 24 hours, along with a link to schedule your 1:1 breakthrough call.",
     },
     {
-      question: "Who is this framework actually for?",
-      answer: "This is for anyone who feels like they are doing 'all the right things' (hustling, using vision boards, repeating affirmations) but still feeling stuck. If you know you're meant for more and want a predictable, structural approach to alignment, this is for you.",
+      question: "Is the 1:1 call a sales pitch?",
+      answer: "No. The call is a dedicated 30-minute session designed to walk you through your blueprint, answer your specific questions, and provide practical strategies for immediate alignment.",
     },
     {
-      question: "I’ve already tried manifestation before. What makes this different?",
-      answer: "Most people are taught techniques before they understand how their energy is actually operating.\n\nThis session focuses on helping you understand the energetic foundation behind your results. Once that foundation becomes clearer, any technique you use becomes more intentional and effective.",
+      question: "I’ve tried numerology and astrology before. How is this different?",
+      answer: "While we use foundational elements like birth data, the Destiny Blueprint focuses specifically on identifying 'energetic leaks' and 'power centers' the practical points where you are currently losing or gaining momentum in your daily life.",
     },
     {
-      question: "Do I need to be spiritual to attend?",
-      answer: "No.\n\nYou simply need to be open to understanding yourself and your patterns more deeply. The concepts are explained in a grounded, practical way. You do not need prior experience with manifestation.",
+      question: "What information do I need to provide?",
+      answer: "All we need is your full birth name and your date of birth. This information allows us to tap into the specific energetic structure you were born with.",
     },
     {
-      question: "Is this focused only on business?",
-      answer: "No.\n\nThis session applies to money, relationships, personal growth, emotional balance, and overall life direction. Manifestation is not limited to one area of life. It is connected to how you operate in all areas.",
+      question: "Can I ask about specific areas like a career change or a relationship issue?",
+      answer: "Absolutely. During your 1:1 session, we can focus on whichever area of your blueprint you feel needs the most immediate attention or alignment.",
     },
     {
-      question: "Will I receive personalized guidance during the webinar?",
-      answer: "This is a live teaching session where you’ll learn a structured 4-step framework. The goal is to give you clarity and direction so you can begin applying immediately.",
+      question: "What if I don't resonate with the reading?",
+      answer: "Our goal is clarity and empowerment. Most clients find the accuracy of the blueprint to be a 'mirror' for things they've felt but couldn't quite name. If you have questions, the 1:1 call is the perfect place to explore them deepy.",
     },
     {
-      question: "I feel like I’ve done a lot of inner work already. Is this still relevant for me?",
-      answer: "Yes.\n\nMany people have explored courses, seminars, or retreats. This session helps you connect those experiences into a clearer understanding of how your energy and daily patterns are shaping your results.",
-    },
-    {
-      question: "What if nothing changes for me?",
-      answer: "The first shift is clarity.\n\nWhen you clearly understand why certain patterns repeat, you stop searching blindly. That awareness alone changes how you move forward.",
-    },
-    {
-      question: "How will I feel after this session?",
-      answer: "Most people leave with a sense of clarity, relief, and direction. Instead of wondering what they are missing, they understand what to focus on next.",
+      question: "How do I know if I'm ready for this?",
+      answer: "If you keep hitting the same plateaus or repeating the same cycles despite doing 'the work,' your energetic foundation is likely out of alignment. This reading is for those ready to stop guessing and start commanding their reality.",
     }
   ];
 
@@ -65,62 +58,58 @@ export function FinalCtaSection() {
             The Final Step
           </div>
 
-          <h2 className="text-5xl md:text-6xl lg:text-7xl font-extrabold font-heading tracking-tight leading-tight mb-8">
-            Your Next Level <br className="hidden md:block" />
-            <span className="text-primary-foreground italic">Starts Now</span>
+          <h2 className="text-4xl md:text-5xl lg:text-7xl font-black font-heading tracking-tight leading-tight mb-8">
+            You already <span className="text-primary-foreground italic">feel it…</span>
           </h2>
 
-          <p className="text-xl md:text-2xl font-medium opacity-90 max-w-3xl leading-relaxed mb-12">
-            You've read this far because you already know you're meant for more. The energetic blocks you've been carrying don't have to dictate your future. It's time to stop hoping for change and start commanding it.
-          </p>
-
-          {/* Urgency Box */}
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-6 bg-background/10 border border-background/20 px-8 py-4 rounded-2xl backdrop-blur-sm mb-12 w-full max-w-2xl">
-            <div className="flex items-center gap-3">
-              <Calendar className="w-6 h-6 text-secondary" />
-              <span className="font-bold font-sans text-lg md:text-xl">March 21, 2026</span>
+          {/* Final Offer Box */}
+          <div className="flex flex-col items-center gap-6 bg-background/10 border-2 border-background/20 px-10 py-10 rounded-[2rem] backdrop-blur-sm mb-12 w-full max-w-2xl shadow-xl relative group">
+            <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-secondary text-secondary-foreground px-6 py-1.5 rounded-full font-black text-sm tracking-widest uppercase shadow-lg">
+              Final Offer
             </div>
-            <div className="hidden sm:block w-px h-8 bg-background/20"></div>
-            <div className="flex items-center gap-3">
-              <Clock className="w-6 h-6 text-secondary" />
-              <span className="font-bold font-sans text-lg md:text-xl">12PM - 1PM EST</span>
+            
+            <div className="flex flex-col items-center">
+              <div className="flex items-center gap-4">
+                <span className="text-2xl md:text-3xl line-through opacity-50 font-bold">$300</span>
+                <SparklesText className="text-5xl md:text-7xl font-black text-primary-foreground">$149 Today</SparklesText>
+              </div>
+              <p className="mt-6 text-lg md:text-xl font-bold font-sans text-center">
+                Includes your personalized report + <br className="hidden sm:block"/> private guided session
+              </p>
             </div>
           </div>
 
-          <p className="text-primary-foreground font-bold text-lg md:text-xl tracking-wide uppercase mb-6 animate-pulse">
-            Seats are strictly limited
-          </p>
-
-          <Link href="/join" className="group relative inline-flex items-center justify-center px-10 py-6 font-bold text-primary bg-white rounded-full shadow-2xl hover:bg-white hover:text-primary transition-all duration-300 hover:scale-105 active:scale-95 text-lg md:text-2xl font-sans w-full sm:w-auto">
-            Join the Masterclass for Just $27
-            <ArrowRight className="ml-3 w-6 h-6 group-hover:translate-x-2 transition-transform" strokeWidth={3} />
-            <div className="absolute inset-0 bg-white/20 rounded-full blur-md -z-10 group-hover:opacity-100 opacity-0 transition-opacity"></div>
+          <Link href="/join" className="group relative inline-flex items-center justify-center px-12 py-8 font-black text-primary bg-white rounded-full shadow-2xl hover:bg-white transition-all duration-300 hover:scale-105 active:scale-95 text-xl md:text-3xl font-sans w-full sm:w-auto overflow-hidden">
+            <div className="absolute inset-0 bg-secondary/10 translate-y-full group-hover:translate-y-0 transition-transform duration-300"></div>
+            <span className="relative">Get Your Destiny Blueprint Reading Now</span>
+            <ArrowRight className="ml-4 w-8 h-8 group-hover:translate-x-2 transition-transform relative" strokeWidth={3} />
           </Link>
         </div>
 
         {/* FAQ Section */}
-        <div className="w-full max-w-3xl mt-24 md:mt-32">
-          <h3 className="text-3xl md:text-4xl font-bold font-heading text-center text-foreground mb-12">
-            Frequently Asked Questions
+        <div className="w-full max-w-4xl mt-24 md:mt-32">
+          <h3 className="text-4xl md:text-5xl font-black font-heading text-center text-foreground mb-16">
+            Commonly <span className="text-primary italic">Asked Questions</span>
           </h3>
 
-          <div className="flex flex-col gap-4">
+          <div className="flex flex-col gap-4 w-full max-w-4xl mx-auto">
             {faqs.map((faq, index) => (
               <details
                 key={index}
-                className="group bg-white/50 backdrop-blur-sm border-2 border-primary/10 rounded-2xl overflow-hidden hover:border-primary/30 transition-colors [&_summary::-webkit-details-marker]:hidden"
+                className="group bg-white/50 backdrop-blur-sm border-2 border-primary/5 rounded-3xl overflow-hidden hover:border-primary/20 transition-all hover:shadow-lg [&_summary::-webkit-details-marker]:hidden"
               >
-                <summary className="flex items-center justify-between p-6 md:p-8 cursor-pointer font-bold font-sans text-lg md:text-xl text-foreground select-none">
-                  {faq.question}
-                  <ChevronDown className="w-6 h-6 text-primary shrink-0 transition-transform duration-300 group-open:-rotate-180" strokeWidth={2.5} />
+                <summary className="flex items-center justify-between p-7 md:p-8 cursor-pointer font-bold font-sans text-lg md:text-xl text-foreground select-none">
+                  <span className="pr-4">{faq.question}</span>
+                  <ChevronDown className="w-5 h-5 text-primary shrink-0 transition-transform duration-300 group-open:-rotate-180" strokeWidth={3} />
                 </summary>
-                <div className="px-6 md:px-8 pb-6 md:pb-8 text-foreground/80 text-lg leading-relaxed pt-0 whitespace-pre-wrap">
+                <div className="px-8 pb-8 text-foreground/70 text-lg leading-relaxed pt-0">
                   {faq.answer}
                 </div>
               </details>
             ))}
           </div>
         </div>
+
 
       </div>
     </section>

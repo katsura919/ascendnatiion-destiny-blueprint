@@ -11,76 +11,58 @@ type Testimonial = {
 
 const testimonials: Testimonial[] = [
     {
-        name: 'Jonathan Yombo',
-        role: 'Business Owner',
-        image: 'https://randomuser.me/api/portraits/men/1.jpg',
-        quote: 'This masterclass completely shifted how I view my goals. The 4-step framework cleared my energetic blocks almost instantly.',
+        name: 'Sarah Jenkins',
+        role: 'Health & Wellness Coach',
+        image: 'https://randomuser.me/api/portraits/women/1.jpg',
+        quote: 'I hit a revenue plateau for nearly 2 years. After my reading, I realized I was leaking energy in my leadership. Within 30 days of realigning my blueprint, my income naturally shifted.',
     },
     {
-        name: 'Yves Kalume',
-        role: 'Tech Founder',
+        name: 'Michael Chen',
+        role: 'Creative Professional',
         image: 'https://randomuser.me/api/portraits/men/6.jpg',
-        quote: 'I used to rely on motivation and vision boards. Now I just stay aligned, and the results flow naturally. It’s been a total game-changer for my startup.',
+        quote: 'I kept attracting the same toxic patterns in love. My blueprint showed me exactly where the cycle started. I am now in a safe, aligned relationship for the first time ever.',
     },
     {
-        name: 'Yucel Faruksahan',
-        role: 'E-commerce Entrepreneur',
-        image: 'https://randomuser.me/api/portraits/men/7.jpg',
-        quote: 'Within weeks of applying the energy shift techniques, my store revenue doubled without me working longer hours. The alignment is real.',
+        name: 'Elena Rodriguez',
+        role: 'Spiritual Mentor',
+        image: 'https://randomuser.me/api/portraits/women/7.jpg',
+        quote: 'I felt chronic burnout and a lack of vitality. The report identified emotional energy stored in my body that I never knew existed. Realigning my frequency has restored my balance.',
     },
     {
-        name: 'Anonymous author',
-        role: 'Startup Founder',
+        name: 'David Thompson',
+        role: 'Executive Director',
         image: 'https://randomuser.me/api/portraits/men/8.jpg',
-        quote: 'I was hesitant about manifestation, but the strategic approach taught here makes perfect logical sense. It bridged the gap between mindset and action.',
+        quote: 'I was lost and looking for my life purpose. This reading decoded my unique energetic blueprint and gave me clear, practical strategies to manifest abundance with ease.',
     },
     {
-        name: 'Shekinah Tshiokufila',
-        role: 'Creative Director',
+        name: 'Linda Wu',
+        role: 'Entrepreneur',
         image: 'https://randomuser.me/api/portraits/women/4.jpg',
-        quote: "Identifying my 'Energetic Point A' was eye-opening. I finally realized what was silently sabotaging my agency's growth. Absolute lifesaver.",
+        quote: "Understanding my natural strengths for earning changed everything. I stopped guessing and started aligning with my authentic power. The abundance followed naturally.",
     },
     {
-        name: 'Oketa Fred',
-        role: 'Real Estate Investor',
+        name: 'James O’Connor',
+        role: 'Tech Consultant',
         image: 'https://randomuser.me/api/portraits/men/2.jpg',
-        quote: 'I absolutely love this framework! I am grounded in real confidence now, and negotiating high-ticket deals feels effortless.',
+        quote: 'The 1:1 call after my reading was the breakthrough I needed. It turned the information into a practical roadmap. I finally feel grounded and in control of my destiny.',
     },
     {
-        name: 'Zeki',
-        role: 'SaaS Founder',
+        name: 'Sophia Martin',
+        role: 'Yoga Instructor',
+        image: 'https://randomuser.me/api/portraits/women/5.jpg',
+        quote: 'I never realized how much my past was blocking my current success. The tools to break repeating cycles actually work. My life feels lighter and more focused now.',
+    },
+    {
+        name: 'Marcus Sterling',
+        role: 'Business Mentor',
         image: 'https://randomuser.me/api/portraits/men/5.jpg',
-        quote: 'Learning to regenerate my energy instead of operating from burnout has been my biggest takeaway. I have more power and clarity than ever.',
+        quote: 'I was a skeptic until I saw my business revenue stagnate for no logical reason. This reading helped me identify the exact mindset block that was stopping my next level.',
     },
     {
-        name: 'Joseph Kitheka',
-        role: 'Marketing Consultant',
-        image: 'https://randomuser.me/api/portraits/men/9.jpg',
-        quote: 'The daily frequency shift is practical and powerful. It has completely transformed the way I show up for client calls and pitch meetings.',
-    },
-    {
-        name: 'Khatab Wedaa',
-        role: 'Solopreneur',
-        image: 'https://randomuser.me/api/portraits/men/10.jpg',
-        quote: "If you're a solopreneur trying to hustle your way to the top, stop right now and take this masterclass. The energetic alignment will save you years.",
-    },
-    {
-        name: 'Rodrigo Aguilar',
-        role: 'Content Creator',
-        image: 'https://randomuser.me/api/portraits/men/11.jpg',
-        quote: 'I used to feel exhausted trying to keep up with the algorithm. Shifting my energy made me magnetic to opportunities I didn\'t even have to pitch for.',
-    },
-    {
-        name: 'Eric Ampire',
-        role: 'Fitness Coach',
-        image: 'https://randomuser.me/api/portraits/men/12.jpg',
-        quote: 'They provide the exact blueprint for aligning yourself with what you want. My coaching roster is now full, and the clients are a perfect energetic match.',
-    },
-    {
-        name: 'Roland Tubonge',
-        role: 'Financial Advisor',
-        image: 'https://randomuser.me/api/portraits/men/13.jpg',
-        quote: 'The level of clarity this framework provides is incredible. Defining my Energetic Point B helped me double my income this year. Highly recommend!',
+        name: 'Amara Okafor',
+        role: 'Creative Artist',
+        image: 'https://randomuser.me/api/portraits/women/8.jpg',
+        quote: 'The Destiny Blueprint isn\'t just a report; it\'s a mirror. It helped me understand why I was attracting inconsistent clients and how to shift my frequency to align with high-value opportunities.',
     },
 ]
 
@@ -111,7 +93,7 @@ export function TestimonialsSection() {
                         <div className="absolute -top-1.5 -right-1.5 w-3 h-3 bg-secondary border-2 border-primary z-10"></div>
                         <div className="absolute -bottom-1.5 -left-1.5 w-3 h-3 bg-secondary border-2 border-primary z-10"></div>
                         <div className="absolute -bottom-1.5 -right-1.5 w-3 h-3 bg-secondary border-2 border-primary z-10"></div>
-                        Student Success Stories
+                        What Changes After Your Reading
                     </div>
 
                     <h2 className="text-4xl md:text-5xl lg:text-7xl font-bold font-heading mb-6 tracking-tight text-foreground leading-tight">

@@ -18,39 +18,38 @@ export function SolutionIntroSection() {
         </div>
 
         {/* Lead in */}
-        <h2 className="text-3xl md:text-4xl font-sans font-medium mb-6 opacity-90">
-          There's a different way.
+        <h2 className="text-4xl md:text-5xl lg:text-6xl font-black font-sans mb-8 tracking-tighter uppercase italic">
+          This is not a generic reading.
         </h2>
 
-        {/* The Solution Name */}
-        <div className="relative inline-block mb-16">
-          <h3 className="text-5xl md:text-7xl lg:text-8xl font-extrabold font-heading tracking-tight leading-tight">
-            It's called <br className="hidden md:block"/>
-            <span className="text-primary relative whitespace-nowrap">
-              Strategic Manifestation.
-              <svg className="absolute w-full h-4 md:h-6 -bottom-3 left-0 text-primary opacity-50" viewBox="0 0 100 10" preserveAspectRatio="none">
-                <path d="M0 5 Q 50 10 100 5" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" />
-              </svg>
-            </span>
-          </h3>
-        </div>
-
-        {/* The contrast */}
-        <div className="w-full flex flex-col items-center bg-background text-foreground rounded-3xl p-8 md:p-12 shadow-2xl border-4 border-background/20 mb-12 transform hover:scale-[1.02] transition-transform duration-500">
-          <p className="text-xl md:text-2xl font-medium opacity-80 mb-4 line-through decoration-primary decoration-2">
-            Instead of hoping for change...
-          </p>
-          <p className="text-2xl md:text-4xl font-bold font-sans tracking-tight leading-snug">
-            You become the version of yourself that <span className="text-secondary underline decoration-primary underline-offset-4 decoration-4">naturally attracts it.</span>
+        {/* The Decoding Line */}
+        <div className="max-w-3xl mb-12">
+          <p className="text-xl md:text-2xl font-medium leading-relaxed opacity-90">
+            Using your <span className="text-primary font-bold">full birth name and date of birth</span>, we decode your unique energetic blueprint to reveal:
           </p>
         </div>
 
-        {/* Conclusion / Masterclass intro */}
-        <div className="mt-8">
-          <p className="text-2xl md:text-3xl font-heading font-medium italic opacity-90">
-            And that's exactly what you'll learn inside this masterclass.
-          </p>
-        </div>
+        {/* Feature list / Revelations */}
+        <div className="w-full max-w-4xl mx-auto flex flex-col gap-6 mb-16 px-4">
+          {[
+            { text: "Where your power naturally exists", delay: 0 },
+            { text: "Where you’ve been leaking energy", delay: 100 },
+            { text: "What’s blocking your next level", delay: 200 }
+          ].map((item, idx) => (
+            <div 
+              key={idx} 
+              className="group flex items-center justify-between p-6 md:p-8 bg-background/5 border-2 border-primary/10 rounded-3xl hover:bg-background/10 hover:border-primary/30 transition-all duration-300"
+            >
+              <div className="flex items-center gap-6">
+                <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-primary-foreground font-bold shadow-lg">
+                  {idx + 1}
+                </div>
+                <span className="text-xl md:text-2xl font-bold font-sans text-left">{item.text}</span>
+              </div>
+              <Sparkles className="hidden md:block w-6 h-6 text-primary/30 group-hover:text-primary transition-colors" />
+            </div>
+          ))}
+        </div>  
 
       </div>
     </section>

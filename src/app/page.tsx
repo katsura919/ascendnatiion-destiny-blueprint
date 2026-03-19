@@ -16,13 +16,11 @@ export default function Home() {
       <HeroSection />
       <ProblemSection />
       <MechanismSection />
-      <EducationSection />
       <SolutionIntroSection />
       <OfferIntroSection />
       <FrameworkSection />
       <CoachesSection />
       <TestimonialsSection />
-      <BonusSection />
       <FinalCtaSection />
     </main>
   );
