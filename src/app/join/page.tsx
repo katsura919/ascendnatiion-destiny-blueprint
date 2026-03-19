@@ -1,21 +1,91 @@
 "use client"
-import Image from "next/image";
-import { CheckCircle2, Lock, ShieldCheck, CreditCard } from "lucide-react";
+import { useState } from "react";
+import { CheckCircle2, Lock, ShieldCheck, CreditCard, Sparkles, Calendar, Mail } from "lucide-react";
 
 export default function JoinPage() {
+  const [loading, setLoading] = useState(false);
+  const [confirmed, setConfirmed] = useState(false);
+
+  function handleSubmit() {
+    setLoading(true);
+    setTimeout(() => {
+      setLoading(false);
+      setConfirmed(true);
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }, 2000);
+  }
+
+  if (confirmed) {
+    return (
+      <main className="min-h-screen bg-[#F8F5EB] flex flex-col items-center justify-center font-sans px-4 py-25">
+        <div className="max-w-xl w-full text-center mt-20">
+          {/* Big animated checkmark */}
+          <div className="w-28 h-28 rounded-full bg-primary/10 border-4 border-primary flex items-center justify-center mx-auto mb-8 shadow-xl">
+            <CheckCircle2 className="w-14 h-14 text-primary" strokeWidth={1.5} />
+          </div>
+
+          <p className="text-primary font-bold uppercase tracking-widest text-sm mb-3">Payment Confirmed</p>
+          <h1 className="text-4xl md:text-5xl font-extrabold font-heading text-foreground mb-5 leading-tight">
+            You&apos;re In! Your Reading<br />is Booked.
+          </h1>
+          <p className="text-lg text-foreground/70 font-medium mb-10 leading-relaxed">
+            Welcome to the next chapter. We&apos;re already looking forward to connecting with you on your 1:1 Alignment Call and diving deep into your Destiny Blueprint.
+          </p>
+
+          {/* What happens next */}
+          <div className="bg-white rounded-3xl p-8 border border-primary/10 shadow-lg text-left space-y-6 mb-10">
+            <p className="font-bold text-foreground text-lg mb-2">What happens next:</p>
+
+            <div className="flex items-start gap-4">
+              <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center shrink-0 mt-0.5">
+                <Mail className="w-5 h-5 text-primary" />
+              </div>
+              <div>
+                <p className="font-bold text-foreground">Check your inbox</p>
+                <p className="text-sm text-foreground/60 mt-0.5">A confirmation email with your order details is on its way to you right now.</p>
+              </div>
+            </div>
+
+            <div className="flex items-start gap-4">
+              <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center shrink-0 mt-0.5">
+                <Calendar className="w-5 h-5 text-primary" />
+              </div>
+              <div>
+                <p className="font-bold text-foreground">We&apos;ll reach out within 24 hrs</p>
+                <p className="text-sm text-foreground/60 mt-0.5">Our team will contact you to schedule your private 1:1 Alignment Call at a time that works for you.</p>
+              </div>
+            </div>
+
+            <div className="flex items-start gap-4">
+              <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center shrink-0 mt-0.5">
+                <Sparkles className="w-5 h-5 text-primary" />
+              </div>
+              <div>
+                <p className="font-bold text-foreground">Your Blueprint is being prepared</p>
+                <p className="text-sm text-foreground/60 mt-0.5">Your personalized Energetic Wealth Profile and Energetic Blockage Roadmap will be ready before your call.</p>
+              </div>
+            </div>
+          </div>
+
+          <p className="text-sm text-foreground/50 font-medium">
+            Questions? Reach us at <span className="text-primary font-semibold">hello@ascendnation.com</span>
+          </p>
+        </div>
+      </main>
+    );
+  }
+
   return (
     <main className="min-h-screen bg-[#F8F5EB] flex flex-col font-sans">
-
-
       <div className="max-w-6xl mx-auto w-full px-4 md:px-6 py-12 md:py-20 grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 mt-24">
-        
-        {/* Left Column: Order Summary (Shows first on mobile) */}
+
+        {/* Left Column: Order Summary */}
         <div className="lg:col-span-5 order-first lg:order-last">
           <div className="bg-white rounded-3xl p-8 border border-primary/10 shadow-xl sticky top-8">
             <h2 className="text-2xl font-bold font-sans text-foreground mb-6 pb-6 border-b border-primary/10">
               Order Summary
             </h2>
-            
+
             <div className="flex items-start gap-4 mb-6">
               <div className="w-16 h-16 rounded-xl bg-primary/10 flex items-center justify-center shrink-0">
                 <span className="text-2xl font-bold text-primary">DB</span>
@@ -58,7 +128,6 @@ export default function JoinPage() {
                 <span className="font-medium">All Deliverables (Value: $797.00)</span>
                 <span className="text-secondary font-extrabold uppercase tracking-wide">INCLUDED</span>
               </div>
-              
               <div className="flex justify-between items-center pt-4 mt-2 border-t border-primary/10">
                 <span className="text-xl font-bold text-foreground">Total Today</span>
                 <span className="text-3xl font-extrabold text-primary">$149.00</span>
@@ -75,7 +144,7 @@ export default function JoinPage() {
           </div>
         </div>
 
-        {/* Right Column: Checkout Form (Shows second on mobile) */}
+        {/* Right Column: Checkout Form */}
         <div className="lg:col-span-7">
           <div className="mb-10">
             <h1 className="text-4xl md:text-5xl font-extrabold font-heading text-foreground mb-4">
@@ -86,8 +155,8 @@ export default function JoinPage() {
             </p>
           </div>
 
-          <form className="space-y-8" onClick={(e) => e.preventDefault()}>
-            
+          <div className="space-y-8">
+
             {/* Contact Information */}
             <div className="bg-white rounded-3xl p-6 md:p-8 border border-primary/10 shadow-sm relative">
               <div className="absolute top-0 right-0 transform translate-x-1/2 -translate-y-1/2 bg-secondary text-white w-8 h-8 rounded-full flex items-center justify-center font-bold font-sans shadow-lg z-10 border-4 border-[#F8F5EB]">
@@ -96,7 +165,6 @@ export default function JoinPage() {
               <h2 className="text-xl font-bold font-sans text-foreground mb-6 flex items-center gap-2">
                 Contact Information
               </h2>
-              
               <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
                 <div className="flex flex-col gap-1.5 space-y-1">
                   <label className="text-sm font-semibold text-foreground/80">First Name</label>
@@ -132,7 +200,6 @@ export default function JoinPage() {
                   <div className="h-6 w-10 bg-gray-200 rounded shrink-0 flex items-center justify-center text-[8px] font-bold text-gray-500">AMEX</div>
                 </div>
               </div>
-
               <div className="space-y-5">
                 <div className="flex flex-col gap-1.5 space-y-1 relative">
                   <label className="text-sm font-semibold text-foreground/80">Card Number</label>
@@ -141,7 +208,6 @@ export default function JoinPage() {
                     <CreditCard className="w-5 h-5 text-foreground/40 absolute left-3.5 top-1/2 -translate-y-1/2 pointer-events-none" />
                   </div>
                 </div>
-                
                 <div className="grid grid-cols-2 gap-5">
                   <div className="flex flex-col gap-1.5 space-y-1">
                     <label className="text-sm font-semibold text-foreground/80">Expiration</label>
@@ -157,19 +223,32 @@ export default function JoinPage() {
 
             {/* Submit Button */}
             <div className="pt-2">
-              <button 
-                className="w-full group relative inline-flex items-center justify-center px-10 py-6 font-bold text-primary-foreground bg-primary rounded-2xl shadow-xl hover:bg-primary/90 transition-all duration-300 hover:-translate-y-1 active:scale-[0.98] text-xl font-sans"
+              <button
+                onClick={handleSubmit}
+                disabled={loading}
+                className="w-full group relative inline-flex items-center justify-center px-10 py-6 font-bold text-primary-foreground bg-primary rounded-2xl shadow-xl hover:bg-primary/90 transition-all duration-300 hover:-translate-y-1 active:scale-[0.98] text-xl font-sans disabled:opacity-80 disabled:cursor-not-allowed disabled:hover:translate-y-0"
               >
-                <Lock className="w-5 h-5 mr-3 opacity-80" />
-                Complete Order - $149
-                <div className="absolute inset-0 bg-white/20 rounded-2xl blur-md -z-10 group-hover:opacity-100 opacity-0 transition-opacity"></div>
+                {loading ? (
+                  <>
+                    <svg className="animate-spin w-5 h-5 mr-3 shrink-0" viewBox="0 0 24 24" fill="none">
+                      <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
+                      <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z" />
+                    </svg>
+                    Processing Payment...
+                  </>
+                ) : (
+                  <>
+                    <Lock className="w-5 h-5 mr-3 opacity-80" />
+                    Complete Order - $149
+                    <div className="absolute inset-0 bg-white/20 rounded-2xl blur-md -z-10 group-hover:opacity-100 opacity-0 transition-opacity"></div>
+                  </>
+                )}
               </button>
               <p className="text-center text-xs text-foreground/60 mt-4 font-medium flex items-center justify-center gap-1.5">
                 <Lock className="w-3.5 h-3.5" /> Payments are secure and encrypted
               </p>
             </div>
-
-          </form>
+          </div>
         </div>
 
       </div>
